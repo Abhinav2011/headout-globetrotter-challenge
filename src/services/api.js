@@ -430,9 +430,9 @@ export const api = {
   // Fetch random destinations for the game (excluding current one if provided)
   getGameDestinations: async (currentId, count = 4) => {
     try {
-      const response = await axios.get(`http://localhost:8080/headout/v1/places/random/other`, {
+      const response = await axios.get(`http://localhost:8080/headout/v1/places/random/three`, {
         params: {
-          correctId: currentId
+          excludeId: currentId
         }
       });
       // Transform the API response to match the expected format
